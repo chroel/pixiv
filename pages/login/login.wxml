@@ -1,0 +1,35 @@
+<!--pages/login/login.wxml-->
+<view class="page my_page">
+    <view class="page__bd">
+        <div class="container">
+            <form bindsubmit="formSubmit">
+                <view class="weui-cells__title my_title">pixiv</view>
+                <view class="weui-cells">
+                    <view class="weui-cell mt-50">
+                        <input name="pixivId" type="text" class="weui-input my_input" placeholder="pixiv ID或邮箱地址" />
+                    </view>
+                    <view class="weui-cell mt-50">
+                        <input name="pixivId" type="password" class="weui-input my_input" placeholder="密码" />
+                    </view>
+                    <view class="weui-cell mt-50">
+                        <view class="btn-area">
+                            <navigator url="index" open-type="redirect">
+                                <button formType="submit" class="btnInfo">登录</button>
+                            </navigator>
+                        </view>
+                    </view>
+                    <view class="weui-cell mt-50">
+                        <view class="my_desc">忘记了登录资料？</view>
+                    </view>
+                    <view class="weui-cell mt-50">
+                        <view class="btn-area">
+                            <navigator>
+                                <button formType="submit" type="primary">未持有账号的用户请点这里</button>
+                            </navigator>
+                        </view>
+                    </view>
+                </view>
+            </form>
+        </div>
+    </view>
+</view>

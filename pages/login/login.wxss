@@ -1,0 +1,30 @@
+/* pages/login/login.wxss */
+.my_page{
+    background: url("../images/loginBg.jpg");
+    /*background: rgba(0,0,0,0.2);*/
+}
+.my_title{
+    color:#fff;
+    font-size: 170rpx;
+    letter-spacing: -20rpx;
+    text-align: center;
+    margin-bottom: 50rpx;
+}
+.mt-50{
+    margin-bottom:50rpx;
+}
+.my_desc{
+    color:#fff;
+    font-size: 28rpx;
+    text-align: center
+}
+.my_input{
+    border:2rpx solid #ccc;
+    border-radius:10rpx;
+    color:#fff;
+    padding:4rpx 10rpx;
+}
+.btnInfo{
+    background: #0096db;
+    color:#fff;
+}
