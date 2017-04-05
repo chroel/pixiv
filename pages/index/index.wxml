@@ -1,10 +1,118 @@
-<!--index.wxml-->
-<view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<!--pages/index/index.wxml-->
+<view class="page my_page">
+    <view class="page__bd">
+      <view class="weui-cells">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+              <image src="../images/slider.png" alt=""></image>
+            </view>
+            <view class="weui-cell__bd">主页</view>
+            <view class="weui-cell__ft">
+              <view class="weui-grids">
+                <navigator style="display:inline" url="" class="weui-grid js_grid">
+                  <view class="weui-grid__icon">
+                    <image src="../images/home.png" alt="" />
+                  </view>
+                  <view class="weui-grid__label">
+                    主页
+                  </view>
+                </navigator>
+                <navigator style="display:inline" url="" class="weui-grid js_grid">
+                  <view class="weui-grid__icon">
+                    <image src="../images/newest.png" alt="" />
+                  </view>
+                  <view class="weui-grid__label">
+                   最新
+                  </view>
+                </navigator>
+                <navigator style="display:inline" url="" class="weui-grid js_grid">
+                  <view class="weui-grid__icon">
+                    <image src="../images/search.png" alt="" />
+                  </view>
+                  <view class="weui-grid__label">
+                    搜索
+                  </view>
+                </navigator>
+              </view>
+            </view>
+        </view>
+      </view>
+      <view class="weui-tab">
+          <view class="weui-navbar">
+              <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+                  <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                      <view class="weui-navbar__title">{{item}}</view>
+                  </view>
+              </block>
+              <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+          </view>
+          <view class="weui-tab__panel">
+              <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                  <!--section1-->
+                  <view class="section">
+                      <view class="section section_gap">
+                          <view class="section__title">
+                            <view class="weui-cells my_cells" style="background: none;margin-top:0">
+                              <view class="weui-cell my_cell">
+                                <view class="weui-cell__hd">
+                                  <image src="../images/crown.png" class="weui-cell__hd-img"></image>
+                                </view>
+                                <view class="weui-cell__bd weui-cell__bd-title">排行榜</view>
+                                <view class="weui-cell__ft weui-cell__ft-desc">查看更多 <view style="color:#1F96F2;display: inline">></view></view>
+                              </view>
+                            </view>
+                          </view>
+                          <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="50" style="width: 100%">
+                              <view class="scroll-view-item_H">
+                                  <image src="../images/loginBg.jpg" mode="center"></image>
+                              </view>
+                              <view class="scroll-view-item_H">
+                                  <image src="../images/crown.png" mode="center"></image>
+                              </view>
+                              <view class="scroll-view-item_H">
+                                  <image src="../images/loginBg.jpg" mode="center"></image>
+                              </view>
+                              <view class="scroll-view-item_H">
+                                  <image src="../images/crown.png" mode="center"></image>
+                              </view>
+                          </scroll-view>
+                      </view>
+                  </view><!--/.section1-->
+                  <!--section2-->
+                  <view class="section">
+                      <view class="section section_gap">
+                          <view class="section__title">
+                            <view class="weui-cells my_cells" style="background: none;margin-top:0">
+                              <view class="weui-cell my_cell">
+                                <view class="weui-cell__hd">
+                                  <image src="../images/zan.png" class="weui-cell__hd-img"></image>
+                                </view>
+                                <view class="weui-cell__bd weui-cell__bd-title">为你推荐</view>
+                              </view>
+                            </view>
+                          </view>
+                          <view class="weui-flex">
+                            <view class="weui-flex__item">
+                              <image src="../images/loginBg.jpg" mode="aspectFill center"></image>
+                            </view>
+                            <view class="weui-flex__item">
+                              <image src="../images/crown.png" mode="top center"></image>
+                            </view>
+                          </view>
+                          <view class="weui-flex">
+                            <view class="weui-flex__item">
+                              <image src="../images/loginBg.jpg" mode="center"></image>
+                            </view>
+                            <view class="weui-flex__item">
+                              <image src="../images/crown.png" mode="center"></image>
+                            </view>
+                          </view>
+                      </view>
+                  </view><!--/.section2-->
+              </view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
+              <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
+          </view>
+      </view>
+    </view>
 </view>

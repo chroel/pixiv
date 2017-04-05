@@ -1,0 +1,69 @@
+<!--pages/register/register.wxml-->
+<view class="page my_page">
+    <view class="page__bd page__bd_spacing">
+        <view class="weui-cells my_cells" style="background: none;margin-top:0">
+            <view class="weui-cell my_cell">
+                <view class="weui-cell__ft" style="height:40rpx;width:100%;">
+                    <navigator url="../login/login" open-type="redirect" style="display: inline-block;position: absolute;right:0">
+                        <button style="background: #6B7083;color:#fff" size="mini">登录</button>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+        <view class="my_logo">pixiv</view>
+        <view class="my_logo__desc">让创作变得更有乐趣</view>
+        <form bindsubmit="formSubmit">
+            <view class="weui-cells__title my_cellsTitle">立即注册</view>
+            <view class="weui-cells my_cells" style="background: none;">
+               <view class="weui-cell" style="background: #fff;padding-top:0;padding-bottom:0;margin:0 30rpx;border-radius: 10rpx 10rpx 0 0">
+                    <input name="pixivEmail" type="text" class="weui-input" style="width:100%" placeholder="邮箱地址" />
+                </view>
+                <view class="weui-cell my__cell" style="background: #fff;padding-top:0;padding-bottom:0;margin:0 30rpx;border-radius: 0 0 10rpx 10rpx">
+                    <input name="pixivPwd" type="password" class="weui-input"  style="width:100%" placeholder="密码" />
+                </view>
+                <view class="weui-cell my_cell">
+                    <view class="btn-area" style="width:100%">
+                        <navigator url="" open-type="redirect" style="width:100%">
+                            <button formType="submit" class="btnInfo">下一页</button>
+                        </navigator>
+                    </view>
+                </view>
+                <view class="weui-cell my_cell">
+                    <view class="weui-cells my_cells" style="margin-top:0;width:100%;border-radius: 10rpx;border:2rpx solid #E7EDEB;background: rgba(255,255,255,0.8)">
+                        <view class="weui-cell my_cell" style="text-align: center">
+                            <navigator url="../forget/forget" open-type="navigate" class="my_desc" style="width:100%">用其他账号开始</navigator>
+                        </view>
+                        <view class="weui-cell my_cell">
+                            <view class="weui-flex" style="flex:1;-webkit-box-flex:1;">
+                                <navigator class="weui-flex__item" style="margin-right:10rpx">
+                                    <button style="background:#DC4E40;border-radius:10rpx;">
+                                        <image src="../images/google.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                    </button>
+                                </navigator>
+                                <navigator class="weui-flex__item" style="margin-right:10rpx">
+                                    <button style="background:#375184;border-radius:10rpx;">
+                                        <image src="../images/f.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                    </button>
+                                </navigator>
+                                <navigator class="weui-flex__item">
+                                    <button style="background:#E32429;border-radius:10rpx;">
+                                        <image src="../images/sina.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                    </button>
+                                </navigator>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </form>
+    </view>
+    <view class="page__ft">
+        <view class="weui-footer">
+            <view class="weui-footer__links">
+                <navigator url="" class="weui-footer__link" style="display: inline;">关于pixiv</navigator>
+                <navigator url="" class="weui-footer__link" style="display: inline;">服务条款</navigator>
+                <navigator url="" class="weui-footer__link" style="display: inline;">帮助</navigator>
+            </view>
+        </view>
+    </view>
+</view>

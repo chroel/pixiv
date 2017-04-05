@@ -1,0 +1,26 @@
+.my_title{
+    color:#fff;
+}
+.page__bd_top{
+    background: #2C353C;
+    text-align: center;
+    padding:20rpx 50rpx;
+}
+.page__bd_top-desc{
+    color:#A8B2BC;
+    font-size: 28rpx;
+    text-align: center
+}
+.page__bd_middle-title{
+    padding-bottom:20rpx;
+    text-align: center;
+    color:#0096db;
+    font-size: 32rpx;
+    font-weight: bold;
+    margin-bottom: 0
+}
+.page__bd_bottom{
+    border-top:2rpx solid #ccc;
+    margin-top:50rpx;
+    padding:20rpx;
+}

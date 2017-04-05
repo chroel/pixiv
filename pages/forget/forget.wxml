@@ -1,0 +1,82 @@
+<!--pages/forget/forget.wxml-->
+<view class="page">
+    <view class="weui-cells my_cells" style="background: #3887E3;margin-top:0">
+        <view class="weui-cell my_cell"> 
+            <view class="weui-cell__bd">
+                <image src="../images/slider.png" style="width:54rpx;height:54rpx;vertical-align: middle"></image>
+            </view>
+            <view class="weui-cell__ft">
+                <navigator url="../login/login" open-type="redirect">
+                    <button class="weui-btn" type="primary" size="mini" style="vertical-align: middle">登录</button>
+                </navigator>
+            </view>
+        </view>
+    </view>
+    <view class="page__bd" style="padding-bottom: 0">
+        <view class="page__bd_top">
+            <view class="page__desc page__bd_top-desc">立即注册为pixiv用户吧！</view>
+            <navigator url="../register/register" open-type="redirect">
+                <button class="weui-btn" type="warn">立即注册</button>
+            </navigator>
+        </view>
+        <view class="page__bd_middle">
+            <form bindsubmit="formSubmitForgot">
+                <view class="weui-cells__title page__bd_middle-title">忘记了ID或者密码</view>
+                <view class="weui-cells" style="margin-top:0">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">忘记的内容</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="radio-group" bindchange="radioChange">
+                                <view class="radio" wx:for="{{ items }}">
+                                    <radio value="{{ item.name }}" checked="{{ item.checked }}" name="forgot">{{ item.value }}</radio>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">邮箱地址</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <input type="email" class="weui-input" placeholder="邮箱"/>
+                        </view>
+                    </view>
+                </view>
+                <view class="weui-cells__tips">
+                    <view>*请选择你所忘记的选项，然后输入你的邮箱，点击发送邮件。</view>
+                    <view>邮箱地址不明的时候，请联系<navigator url="" open-type="redirect" style="display: inline;color:#3887E3">窗口</navigator></view>
+                </view>
+                <view class="btn-area" style="margin:40rpx 20rpx 0 20rpx;">
+                    <button formType="submit" type="" class="btnInfo">传送</button>
+                </view>
+            </form>
+        </view>
+        <view class="page__bd_bottom">
+            <view>
+                <image src="../images/vip.png" alt="" style="width:40rpx;height:40rpx;"></image>
+                <navigator url="" style="display: inline;">高级会员</navigator>
+            </view>
+            <view class="weui-footer">
+                <view class="weui-footer__links">
+                    <navigator url="" class="weui-footer__link" style="display: inline;">公告</navigator>
+                    <navigator url="" class="weui-footer__link" style="display: inline;">服务条款</navigator>
+                    <navigator url="" class="weui-footer__link" style="display: inline;">帮助中心</navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="page__ft">
+        <view class="weui-footer">
+            <view class="weui-cells my_cells" style="background: #E9EDF0;margin-top:0">
+                <view class="weui-cell my_cell">
+                    <view class="weui-cell__bd" style="text-align: left">pixiv</view>
+                    <view class="weui-cell__ft">
+                        <navigator url="../pc/pc" open-type="redirect" style="display: inline">去PC版</navigator>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

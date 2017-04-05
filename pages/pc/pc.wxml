@@ -1,0 +1,53 @@
+<!--pages/pc/pc.wxml-->
+<view class="page my_page">
+    <view class="page__bd page__bd_spacing">
+        <view class="page__bd__content">
+            <view class="my_logo">pixiv</view>
+            <view class="my_logo__desc">让创作变得更有乐趣</view>
+            <form bindsubmit="formSubmit">
+                <view class="weui-cells my_cells" style="background: none;">
+                    <view class="weui-cell my_cell">
+                       <view class="btn-area" style="width:100%">
+                            <navigator url="../register/register" open-type="redirect" style="width:100%">
+                                <button formType="submit" class="btnInfo">立即注册</button>
+                            </navigator>
+                        </view>
+                    </view>
+                    <view class="weui-cell my_cell">
+                        <view class="btn-area" style="width:100%">
+                            <navigator url="../login/login" open-type="redirect" style="width:100%">
+                                <button formType="submit" style="background: #6B7083;color:#fff">登录</button>
+                            </navigator>
+                        </view>
+                    </view>
+                    <view class="weui-cell my_cell">
+                        <view class="weui-cells my_cells" style="margin-top:0;width:100%;border-radius: 10rpx;border:2rpx solid #E7EDEB;background: rgba(255,255,255,0.8)">
+                            <view class="weui-cell my_cell" style="text-align: center">
+                                <navigator url="../forget/forget" open-type="navigate" class="my_desc" style="width:100%">用其他账号开始</navigator>
+                            </view>
+                            <view class="weui-cell my_cell">
+                                <view class="weui-flex" style="flex:1;-webkit-box-flex:1;">
+                                    <navigator class="weui-flex__item" style="margin-right:10rpx">
+                                        <button style="background:#DC4E40;border-radius:10rpx;">
+                                            <image src="../images/google.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                        </button>
+                                    </navigator>
+                                    <navigator class="weui-flex__item" style="margin-right:10rpx">
+                                        <button style="background:#375184;border-radius:10rpx;">
+                                            <image src="../images/f.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                        </button>
+                                    </navigator>
+                                    <navigator class="weui-flex__item">
+                                        <button style="background:#E32429;border-radius:10rpx;">
+                                            <image src="../images/sina.png" style="width:54rpx;height:54rpx;vertical-align: middle;"></image>
+                                        </button>
+                                    </navigator>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </form>
+        </view>
+    </view>
+</view>

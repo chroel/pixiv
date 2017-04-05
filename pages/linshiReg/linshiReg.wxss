@@ -1,0 +1,18 @@
+/* pages/linshiReg/linshiReg.wxss */
+page{
+    background: url("../images/loginBg.jpg");
+}
+.my_page{
+    background: rgba(0,0,0,0.4);
+    height: 100%;
+    color:#fff;
+    padding-top:43%;
+    padding-bottom: 43%;
+}
+.my__cell{
+    padding:0 30rpx;
+}
+.mycell_title{
+    color:#4891D9;
+    padding:0 30rpx;
+}

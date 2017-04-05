@@ -1,0 +1,25 @@
+/* pages/register/register.wxss */
+page{
+    background: #eee;
+    height:100%
+}
+.my_logo{
+    color:#019AFD;
+    font-size: 150rpx;
+    text-align: center;
+    margin-bottom: 0
+}
+.my_logo__desc{
+    text-align: center;
+    margin-top:-30rpx;
+    color:#565C5C
+}
+.my_cellsTitle{
+    text-align: center;
+    color:#6D7579;
+    font-size: 45rpx;
+    font-weight: bold
+}
+.my__cell:before{
+    left:0
+}

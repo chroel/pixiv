@@ -1,35 +1,35 @@
 <!--pages/login/login.wxml-->
 <view class="page my_page">
     <view class="page__bd">
-        <div class="container">
+        <view class="page__bd__content">
+            <view class="my_logo">pixiv</view>
             <form bindsubmit="formSubmit">
-                <view class="weui-cells__title my_title">pixiv</view>
-                <view class="weui-cells">
-                    <view class="weui-cell mt-50">
-                        <input name="pixivId" type="text" class="weui-input my_input" placeholder="pixiv ID或邮箱地址" />
+                <view class="weui-cells my_cells" style="background: none;margin-top:0">
+                    <view class="weui-cell my_cell">
+                        <input name="pixivId" type="text" class="weui-input my_input" style="width:100%" placeholder="pixiv ID或邮箱地址" />
                     </view>
-                    <view class="weui-cell mt-50">
-                        <input name="pixivId" type="password" class="weui-input my_input" placeholder="密码" />
+                    <view class="weui-cell my_cell">
+                        <input name="pixivPwd" type="password" class="weui-input my_input"  style="width:100%" placeholder="密码" />
                     </view>
-                    <view class="weui-cell mt-50">
-                        <view class="btn-area">
-                            <navigator url="index" open-type="redirect">
+                    <view class="weui-cell my_cell">
+                        <view class="btn-area" style="width:100%">
+                            <navigator url="../index/index" open-type="redirect" style="width:100%">
                                 <button formType="submit" class="btnInfo">登录</button>
                             </navigator>
                         </view>
                     </view>
-                    <view class="weui-cell mt-50">
-                        <view class="my_desc">忘记了登录资料？</view>
+                    <view class="weui-cell my_cell" style="text-align: center">
+                        <navigator url="../forget/forget" open-type="navigate" class="my_desc" style="width:100%">忘记了登录资料？</navigator>
                     </view>
-                    <view class="weui-cell mt-50">
+                    <view class="weui-cell my_cell">
                         <view class="btn-area">
-                            <navigator>
+                            <navigator url="../linshiReg/linshiReg" open-type="navigate">
                                 <button formType="submit" type="primary">未持有账号的用户请点这里</button>
                             </navigator>
                         </view>
                     </view>
                 </view>
             </form>
-        </div>
+        </view>
     </view>
 </view>

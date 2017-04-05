@@ -1,0 +1,25 @@
+/* pages/pc/pc.wxss */
+page{
+    background: url("../images/loginBg.jpg");
+    /*background: rgba(0,0,0,0.2);*/
+    height:100%
+}
+.page__bd__content{
+    height:auto;
+    padding:0 30rpx 40rpx 30rpx;
+    display: block;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10rpx;
+    margin-top:25%;
+}
+.my_logo{
+    color:#019AFD;
+    font-size: 150rpx;
+    text-align: center;
+    margin-bottom: 0;
+}
+.my_logo__desc{
+    text-align: center;
+    margin-top:-30rpx;
+    color:#565C5C
+}

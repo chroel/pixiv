@@ -1,7 +1,13 @@
 {
   "pages":[
-    "pages/login/login",
+
     "pages/index/index",
+    "pages/login/login",
+    "pages/forget/forget",
+    "pages/pc/pc",
+    "pages/register/register",
+    "pages/linshiReg/linshiReg",
+
     "pages/logs/logs"
   ],
   "window":{
