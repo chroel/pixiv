@@ -9,7 +9,7 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0,
         toView: 'red',
-        scrollTop: 100
+        scrollTop: 100,
     },
     onLoad: function () {
         var that = this;
@@ -51,5 +51,8 @@ Page({
       this.setData({
         scrollTop: this.data.scrollTop + 10
       })
+    },
+    imageError: function(e) {
+      console.log('image3发生error事件，携带值为', e.detail.errMsg)
     }
 });

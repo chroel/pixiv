@@ -1,31 +1,16 @@
 {
   "pages":[
-
-    "pages/index/index",
     "pages/login/login",
     "pages/forget/forget",
     "pages/pc/pc",
     "pages/register/register",
     "pages/linshiReg/linshiReg",
-
-    "pages/logs/logs"
+    "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "pixiv",
     "navigationBarTextStyle":"black"
-  },
-  "tarbar":{
-    "color":"#000",
-    "selectedColor":"#ccc",
-    "backgroundColor":"#ddd",
-    "list":[{
-      "pagePath":"pages/index/index",
-      "text":"首页"
-    },{
-      "pagePath":"pages/logs/logs",
-      "text":"日志"
-    }]
   }
 }
