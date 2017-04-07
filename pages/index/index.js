@@ -8,7 +8,7 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0,
         scrollTop: 100,
-        rankArray:[
+        chahuaRankArray:[
           {
               mode:'aspectFill',
               src:'../images/photo2.png',
@@ -90,6 +90,18 @@ Page({
               num:3,
               mode:'aspectFill',
               src:'../images/crown.png',
+          },
+          {
+              id:4,
+              num:1,
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+          },
+          {
+              id:5,
+              num:3,
+              mode:'aspectFill',
+              src:'../images/crown.png',
           }
         ],
         pixivsionArray:[
@@ -117,6 +129,72 @@ Page({
               mode:'aspectFill',
               src:'../images/photo2.png',
               paintDesc:'樱花樱花樱花樱花樱花。樱花特辑。'
+          }
+        ],
+        manhuaRankArray:[
+          {
+              num:6,
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintName:'Bird',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:3,
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+              paintName:'House and Road',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:1,
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+              paintName:'Night Elves',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:3,
+              mode:'aspectFill',
+              src:'../images/crown.png',
+              paintName:'crown',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:1,
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintName:'Bird',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:6,
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+              paintName:'House and Road',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:3,
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+              paintName:'Night Elves',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              num:3,
+              mode:'aspectFill',
+              src:'../images/crown.png',
+              paintName:'crown',
+              authorImg:'../images/vip.png',
+              author:'TID'
           }
         ],
     },

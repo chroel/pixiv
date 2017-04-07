@@ -96,8 +96,11 @@
   right:0;
   top:0;
 }
+.mask2 image{
+  display: inline-block
+}
 .pixivsion .scroll-view-item_H{
-  border-top:18rpx solid #1F96F2
+  border-top:18rpx solid #1F96F2;
 }
 .mask3{
   background:rgba(255,255,255,0.7);
