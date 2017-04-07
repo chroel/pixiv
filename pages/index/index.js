@@ -1,6 +1,5 @@
 //index.js
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-var order = ['red', 'yellow', 'blue', 'green', 'red']
 
 Page({
     data: {
@@ -8,8 +7,118 @@ Page({
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
-        toView: 'red',
         scrollTop: 100,
+        rankArray:[
+          {
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintName:'Bird',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+              paintName:'House and Road',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+              paintName:'Night Elves',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/crown.png',
+              paintName:'crown',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintName:'Bird',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+              paintName:'House and Road',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+              paintName:'Night Elves',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/crown.png',
+              paintName:'crown',
+              authorImg:'../images/vip.png',
+              author:'TID'
+          }
+        ],
+        recommendArray:[
+          {
+              id:0,
+              num:6,
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+          },
+          {
+              id:1,
+              num:1,
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+          },
+          {
+              id:2,
+              num:1,
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+          },
+          {
+              id:3,
+              num:3,
+              mode:'aspectFill',
+              src:'../images/crown.png',
+          }
+        ],
+        pixivsionArray:[
+          {
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintDesc:'点缀邂逅与离别的樱花。樱花特辑。'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/photo1.png',
+              paintDesc:'点缀邂逅与离别的樱花。樱花特辑。'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/loginBg.jpg',
+              paintDesc:'点缀邂逅与离别的樱花。樱花特辑。'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/crown.png',
+              paintDesc:'点缀邂逅与离别的樱花。樱花特辑。'
+          },
+          {
+              mode:'aspectFill',
+              src:'../images/photo2.png',
+              paintDesc:'樱花樱花樱花樱花樱花。樱花特辑。'
+          }
+        ],
     },
     onLoad: function () {
         var that = this;
@@ -36,16 +145,6 @@ Page({
     },
     scroll: function(e) {
       console.log(e)
-    },
-    tap: function(e) {
-      for (var i = 0; i < order.length; ++i) {
-        if (order[i] === this.data.toView) {
-          this.setData({
-            toView: order[i + 1]
-          })
-          break
-        }
-      }
     },
     tapMove: function(e) {
       this.setData({

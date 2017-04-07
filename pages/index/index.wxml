@@ -64,14 +64,14 @@
                                   </view>
                               </view>
                               <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="50" style="width: 100%">
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
+                                  <view class="scroll-view-item_H" wx:for="{{rankArray}}" wx:for-item="item">
+                                      <image src="{{ item.src }}" mode="{{ item.mode }}"></image>
                                       <view class="weui-cells my_cells mask" style="background:rgba(0,0,0,0.5);">
                                           <view class="weui-cell my_cell">
                                               <view class="weui-cell__bd">
-                                                  <view>Night Elves</view>
+                                                  <view>{{ item.paintName }}</view>
                                                   <view class="author">
-                                                      <image src="../images/vip.png" style="width:42rpx;height:42rpx;display:inline-block;vertical-align:top;margin-right:6rpx;"></image>TID
+                                                      <image src="{{ item.authorImg }}" style="width:42rpx;height:42rpx;display:inline-block;vertical-align:top;margin-right:6rpx;"></image>{{ item.author }}
                                                   </view>
                                               </view>
                                               <view class="weui-cell__ft">
@@ -79,33 +79,6 @@
                                               </view>
                                           </view>
                                       </view>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/crown.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/crown.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
                                   </view>
                               </scroll-view>
                           </view>
@@ -125,44 +98,20 @@
                                       </view>
                                   </view>
                               </view>
-                              <view class="weui-flex">
-                                  <view class="weui-flex__item mr-3" style="position:relative">
-                                      <view class="mask2">
-                                          <image src="../images/copy.png" style="width:32rpx;height:32rpx;margin-right:8rpx;"></image>6
-                                      </view>
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                      <view class="weui-cells my_cells mask">
-                                          <view class="weui-cell my_cell">
-                                              <view class="weui-cell__bd"></view>
-                                              <view class="weui-cell__ft">
-                                                  <image src="../images/dislikes.png" style="width:42rpx;height:42rpx;"></image>
-                                              </view>
-                                          </view>
-                                      </view>
-                                  </view>
-                                  <view class="weui-flex__item" style="position:relative">
-                                      <view class="mask2">
-                                          <image src="../images/copy.png" style="width:32rpx;height:32rpx;margin-right:8rpx;"></image>6
-                                      </view>
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                      <view class="weui-cells my_cells mask">
-                                          <view class="weui-cell my_cell">
-                                              <view class="weui-cell__bd"></view>
-                                              <view class="weui-cell__ft">
-                                                  <image src="../images/dislikes.png" style="width:42rpx;height:42rpx;"></image>
-                                              </view>
-                                          </view>
-                                      </view>
-                                  </view>
-                              </view>
-                              <view class="weui-flex">
-                                  <view class="weui-flex__item mr-3">
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="weui-flex__item">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
-                                  </view>
-                              </view>
+                              <view style="position:relative;width:50%;margin-right:0;display:inline-block" wx:for="{{recommendArray}}" wx:for-item="item" >
+                                    <view class="mask2" wx:if="{{item.num>1}}">
+                                        <image src="../images/copy.png" style="width:32rpx;height:32rpx;margin-right:8rpx;"></image>{{item.num}}
+                                    </view>
+                                    <image src="{{item.src}}" mode="{{item.mode}}"></image>
+                                    <view class="weui-cells my_cells mask">
+                                        <view class="weui-cell my_cell">
+                                            <view class="weui-cell__bd"></view>
+                                            <view class="weui-cell__ft">
+                                                <image src="../images/dislikes.png" style="width:42rpx;height:42rpx;"></image>
+                                            </view>
+                                        </view>
+                                    </view>
+                               </view>
                           </view>
                       </view>
                   </view><!--/.recommand-->
@@ -170,6 +119,7 @@
                   <view class="pixivsion">
                        <view class="section">
                           <view class="section section_gap">
+                              <!--标题-->
                               <view class="section__title">
                                   <view class="weui-cells my_cells" style="background: none;margin-top:0">
                                       <view class="weui-cell my_cell">
@@ -178,45 +128,36 @@
                                       </view>
                                   </view>
                               </view>
+                              <!--scroll-view-->
                               <scroll-view class="scroll-view_H" scroll-x="true" scroll-left="50" style="width: 100%">
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                      <view class="mask3 flex-wrp" style="display: flex;flex-wrap:wrap;flex-direction:row;">
-                                          点缀邂逅与离别的樱花。樱花特辑。
-                                      </view>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/crown.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/loginBg.jpg" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/crown.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo2.png" mode="aspectFill"></image>
-                                  </view>
-                                  <view class="scroll-view-item_H">
-                                      <image src="../images/photo1.png" mode="aspectFill"></image>
+                                  <view class="scroll-view-item_H" wx:for="{{pixivsionArray}}" wx:for-item="item">
+                                        <image src="{{item.src}}" mode="{{item.mode}}"></image>
+                                        <view class="mask3" style="white-space:pre-line;line-height:120%;">
+                                            {{item.paintDesc}}
+                                        </view>
                                   </view>
                               </scroll-view>
+                              <!--加载更多-->
+                              <view class="pixivsion_more">
+                                  <view style="position:relative;width:50%;margin-right:0;display:inline-block" wx:for="{{recommendArray}}" wx:for-item="item" >
+                                        <view class="mask2" wx:if="{{item.num>1}}">
+                                            <image src="../images/copy.png" style="width:32rpx;height:32rpx;margin-right:8rpx;"></image>{{item.num}}
+                                        </view>
+                                        <image src="{{item.src}}" mode="{{item.mode}}"></image>
+                                        <view class="weui-cells my_cells mask">
+                                            <view class="weui-cell my_cell">
+                                                <view class="weui-cell__bd"></view>
+                                                <view class="weui-cell__ft">
+                                                    <image src="../images/dislikes.png" style="width:42rpx;height:42rpx;"></image>
+                                                </view>
+                                            </view>
+                                        </view>
+                                    </view>
+                              </view><!--/.加载更多-->
                           </view>
                       </view>
                   </view><!--/.pixivsion-->
-              </view>
+              </view><!--./weui-tab__content1-->
               <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
               <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
           </view>
